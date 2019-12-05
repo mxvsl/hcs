@@ -32,11 +32,11 @@ First Header  | Second Header
 
 ## Invoice Code
 
-Spcial code that we found on templates. Maybe it an equivalent to Invoice Number?
+Special code that we found on templates. Maybe it an equivalent to Invoice Number?
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceCode`      | Seial Code of any Invoice.       | string or uint   | BCP120-4o2       |    
+| `invoiceCode`      | Serial Code of any Invoice.       | string or uint   | BCP120-4o2       |    
 ## Invoice Year
 
 Defines year of Invoice creation.
