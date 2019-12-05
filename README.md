@@ -20,41 +20,41 @@ https://drive.google.com/drive/folders/1orGvVcgdzbyK-zzQsKWswtLB8Y_eK7Lz
 
 # Invoice Data
 ## Invoice Number
-Number of the Invoice. What type it should be for the invoice to be easely adopt by final users?
-Template for the number is needed.
-First Header  | Second Header
-
+The number of the Invoice. What's the format of the Invoice Number (which type of characters will be used)?
+Template for the Invoice number is needed.
 
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceNumber`      | Seial Number of any Invoice.       | string or uint   | BCP120-4o2       |    
+| `invoiceNumber`      | Serial Number of any Invoice.       | string or uint   | BCP120-4o2       |    
 
 ## Invoice Code
 
-Special code that we found on templates. Maybe it an equivalent to Invoice Number?
+Invoice Code is a special code that we found on templates. Maybe Invoice Code is the same as the Invoice Number.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceCode`      | Serial Code of any Invoice.       | string or uint   | BCP120-4o2       |    
+
 ## Invoice Year
 
-Defines year of Invoice creation.
+Invoice Year is the year when the Invoice was originated.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceYearCreation`      | Year of Invoice creation.       |  uint8   | 2019       |    
+| `invoiceYearCreation`      | Year of Invoice generation.       |  uint8   | 2019       |    
 
 ## Invoice Date
 
-Defines date of Invoice creation.
+Invoice Date is the date when Invoice was generated.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceDate`      | Year of Invoice creation.       | string or uint   | 2019.02.02       |    
+| `invoiceDate`      | Date of Invoice generation.       | string or uint   | 2019.02.02       |    
+
 ## Bill To
 
-Data Device Co. billing address.
+Bill To is the billing address of a Data Device Co.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
@@ -62,11 +62,12 @@ Data Device Co. billing address.
 
 ## Sold To
 
-Data about Hospital's billing address.
+Sold To is the billing address of a Hospital's.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceSoldTo`      | Banking account.       | string or uint   | PJCB132IR142       | 
+
 ## Purchase Order
 
 **Was found in the templates. No idea about the meaning.**
@@ -102,8 +103,10 @@ Define final location of the device.
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceRequestLocation` | Place where to ship the device.       | string   | The Best Place for Delievery st. 15      | 
+
 ## Requistation
 **what data should be there**?
+
 ## Purchase From
 **Who is the third party?**
 
@@ -114,15 +117,18 @@ Default cost without comission, taxes, etc.
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceCostDefault`      | Tax-free price.       | string or uint  | $1,111,111,111.12       | 
+
 ## Requisition Description
 Some scpecial description for the Invoice.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceRequsutionDescr`      | Notes to the Invoice.       | string  | Bу carefull      | 
+
 ## Requester
 Info about person or organization.
 **Docter or Hopital?**
+
 ## Deliver To
 The address where to deliever the device.
 What difference between **Request Location**?
