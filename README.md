@@ -1,11 +1,11 @@
 ### Introduction
 
 - Standart of HCS Invoice;
-- NOT FINALIED YET;
+- NOT FINALIZED YET;
 - Avoid putting to much data;
 - Avoid data duplication;
 - Data can be string type, which means text. Maximum 256 bytes for the one field of text. One symbol is 1 byte @https://en.wikipedia.org/wiki/ASCII;
-- Data can be uint, which means digits. @https://en.wikipedia.org/wiki/Integer_(computer_science);
+- Data can be uint, which means Unsigned INTeger. @https://en.wikipedia.org/wiki/Integer_(computer_science);
 - Date is a uint too. @https://en.wikipedia.org/wiki/Unix_time;
 - NO PRIVATE OR PERSONAL DATA!;
 
