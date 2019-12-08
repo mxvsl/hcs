@@ -140,31 +140,31 @@ Buyer might indicate an allocated individual within the Hospital.
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoicePurchaseFrom` | Allocated purchaser within the Hospital  | string   | GAC - GARY CORDERO   | 
 
-## Cost Default Vendor
-Default cost without comission, taxes, etc.
-
-| Field name | Description                     | Blockchain Type   | Example           |
-| ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceCostDefault`      | Tax-free price.       | string or uint  | $1,111,111,111.12       | 
 
 ## Requisition Description
-Some scpecial description for the Invoice.
+
+Requisition Description might indicate  a memo for the Invoice.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceRequsutionDescr`      | Notes to the Invoice.       | string  | Bу carefull      | 
+| `invoiceRequsitionDescr`      | Invoice Memo       | string  | N/A      | 
 
 ## Requester
-Info about person or organization.
-**Docter or Hopital?**
 
-## Deliver To
-The address where to deliever the device.
-What difference between **Request Location**?
+Requester - we don't know what that could mean.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceDelieverTo`      | Address.       | string  | Place for Devices       | 
+| `invoiceRequester`      | ?     | string  | EN17053 - James DiPinto    | 
+
+## Deliver To
+
+Deliver To might indicate the location to which devices should be delivered.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoiceDeliverTo`      | Delivery Address      | string  | N/A      | 
+
 # Invoice info Table:
 ## Item
 ### NAME
