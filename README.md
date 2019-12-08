@@ -165,79 +165,147 @@ Deliver To might indicate the location to which devices should be delivered.
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceDeliverTo`      | Delivery Address      | string  | N/A      | 
 
-# Invoice info Table:
+# Invoice Item Data:
 
-## Item
+## Item Code
 
-### DeNAME
-Name of a Device
-
-| Field name | Description                     | Blockchain Type   | Example           |
-| ------------- | ------------------------------ |---------------------|------------------|          
-| `itemDevice`      | Quck description.       | string  | Best Device       | 
-### VENDOR
-Seller name.
+Item Code is a special code for the device.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `itemVendor`      | Name of organization.       | string   | BestVendor LLC.       | 
-### VENDOR ITEM
-Special description for the Venor Co. Special code or something else.
+| `itemDeviceCode`      | Item Code     | string  | D081041      | 
+
+## Item Name
+
+Item Name is the name of a device.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `itemVendorItem`      | Code for Vendor.       | string or uint  | TX-15R2       | 
+| `itemDeviceName`      | Device Name      | string  | VALVE AORTIC PERIMOUNT SZ 25 / EACH       | 
+
+## Vendor
+
+Vendor is a Vendor organization.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemVendor`      | Vendor Organization       | string   | EDWARDS LIFESCIENCES LLC     | 
+
+## Vendor Item
+
+Vendor Item is a special code for a Vendor or a device. 
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemVendorItem`      | Special code      | string or uint  | 3300TFX25MM     | 
+
 ### GTIN
-**???**
-### Manufacurer Code
-Special dexription for the Devce Co. Special code or something like that.
+
+The Global Trade Item Number (GTIN) is an identified for trade items.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `itemManufCode`      | Code for Manufacturer.       | string or uint  | TX-15R2       | 
+| `itemGTIN`      | GTIN      | string or uint  | 00690103176155     | 
+
+### Manufacturer Code
+
+Manufacturer Code is a special code of a manufactturing organization.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemManufCode`      | Manufacturer Special Code       | string or uint  | 3300TFX25MM     | 
+
 ### PO Code
-**???**
+
+PO (Purchase Order) Code is a special code identifying a device.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemPOCode`      | PO Code      | string or uint  | GEN     | 
+
 ## Item Type
-**???**
+
+Item Type describes the type of an item.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemManufCode`      | Item Type     | string or uint  | Nonstock     | 
+
 ## UOM
-**???**
+
+UOM (Unit of Measurement) is a measurement code for Invoices.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemUOMCode`      | Unit of Measurement    | string or uint  | EA    | 
+
 ## Unit Cost
-Price for the one device.
+
+Unit Cost represents the price of a device.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceUnitCost`      | Unit tax-free price.       | string or uint  | $100       | 
+| `ItemUnitCost`      | Unit price       | string or uint  | $100.00       | 
+
 ## Extended Cost
-Price with taxes, fees, etc.
+
+Extended Cost is a price with taxes, fees, etc.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `itemExtendedCost`      | Unit final price.       | string or uint  | $100       | 
+| `itemExtendedCost`      | Unit final price      | string or uint  | $105.36     | 
+
 ## Distributions
-**???**
+
+Distributions - we don't know what that could mean.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemDistributions`      | ?    | string or uint  | 400-185533-0100    | 
+
 ## Activity / Account Category
-**??**
+
+Activity / Account Category - we don't know what that could mean.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemActivity`      | ?    | string or uint  | N/A   | 
+
 ## Distribution Allocation
-**??**
-## Requested Delievery Date
-When is the time to deliever.
-**what is the difference between Due Date**
+
+Distribution Allocation - we don't know what that could mean.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceRequestedDate`      | Final Date to deliever.       | string or uint  | 2020.02.02       | 
+| `itemDistributionAlloc`      | ?    | string or uint  | 100.0%   | 
+
+## Requested Delivery Date
+
+Requested Delivery Date is a delivery date for the device.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemDeliveryDate`      | Final Delivery Date of the Device      | string or uint  | 10/18/2019      | 
+
 ## Sourcing Event
-**??**
-## Quantity
-**ATTENTION**
-Should we use this field? Or we can create Invoice for any one device and unite them on the back-end?
+
+Sourcing Event - we don't know what that could mean.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceQuantity`      | Amount of devices.       | uint8  | 155       | 
+| `itemSourcingEvent`      | ?     | string or uint  | No     | 
+
+## Quantity Ordered
+
+Quantity Ordered is an ordered device quantity.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `itemQuantity`      | Quantity Ordered      | uint8  | 1       | 
+
 ## Description
-Brief description of the Invoice. Do we need
+Description is a brief description of the Item Ordered.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceDescription`      | Note about the Invoice.       | string or uint  | Awesome Invoice       | 
+| `itemDescription`      | Item Description     | string or uint  | Venapax XL Vessel Harvesting System       | 
