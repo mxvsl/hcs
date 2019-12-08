@@ -92,7 +92,6 @@ Due Date indicates the date on which an invoice is due.
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoiceDueDate`      | Invoice Due Date     | uint   | 11/6/2019       | 
 
-# Seller
 ## Company
 
 Company indicates Company Name and its special code.
@@ -141,9 +140,6 @@ Buyer might indicate an allocated individual within the Hospital.
 | ------------- | ------------------------------ |---------------------|------------------|          
 | `invoicePurchaseFrom` | Allocated purchaser within the Hospital  | string   | GAC - GARY CORDERO   | 
 
-
-
-# Buyer
 ## Cost Default Vendor
 Default cost without comission, taxes, etc.
 
