@@ -166,8 +166,10 @@ Deliver To might indicate the location to which devices should be delivered.
 | `invoiceDeliverTo`      | Delivery Address      | string  | N/A      | 
 
 # Invoice info Table:
+
 ## Item
-### NAME
+
+### DeNAME
 Name of a Device
 
 | Field name | Description                     | Blockchain Type   | Example           |
