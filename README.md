@@ -26,7 +26,7 @@ Template for the Invoice number is needed.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceNumber`      | Serial Number of any Invoice.       | string or uint   | BCP120-4o2       |    
+| `invoiceNumber`      | Serial Number of any Invoice       | string or uint   | BCP120-4o2       |    
 
 ## Invoice Code
 
@@ -34,7 +34,7 @@ Invoice Code is a special code that we found on templates. Maybe Invoice Code is
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceCode`      | Serial Code of any Invoice.       | string or uint   | BCP120-4o2       |    
+| `invoiceCode`      | Serial Code of any Invoice       | string or uint   | BCP120-4o2       |    
 
 ## Invoice Year
 
@@ -42,7 +42,7 @@ Invoice Year is the year when the Invoice was originated.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceYearCreation`      | Year of Invoice generation.       |  uint8   | 2019       |    
+| `invoiceYearCreation`      | Year of Invoice generation       |  uint8   | 2019       |    
 
 ## Invoice Date
 
@@ -50,65 +50,98 @@ Invoice Date is the date when Invoice was generated.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceDate`      | Date of Invoice generation.       | string or uint   | 2019.02.02       |    
+| `invoiceDate`      | Date of Invoice generation       | string or uint   | 10/7/2019       |    
 
 ## Bill To
 
-Bill To is the billing address of a Data Device Co.
+Bill To is a special code. Example: "Bill To" code presented by Endologix is 30180 (top right corner).
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceBillTo`      | Banking account.       | string or uint   | PJCB132IR142       |    
+| `invoiceBillTo`      | Special Code      | string or uint   | 30180       |    
 
 ## Sold To
 
-Sold To is the billing address of a Hospital's.
+Bill To is a special code. Example: "Sold To" code presented by Endologix is 30180 (top right corner).
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceSoldTo`      | Banking account.       | string or uint   | PJCB132IR142       | 
+| `invoiceSoldTo`      | Special Code       | string or uint   | 30180       | 
 
 ## Purchase Order
 
-**Was found in the templates. No idea about the meaning.**
+Purchase Order is a special code. Example: "Purchase Order" code presented by Endologix is blank (top right corner).
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoicePurchaseOrder`      | Special Code       | string or uint   | N/A      | 
 
 ## Credit Terms Code
-Some specific info for the banking system.
+
+Credit Terms Code is a special code. Example: "Credit Terms Code" presented by Endologix is N30 (top right corner).
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceCreditTerms`      | Credit terms.       | string or uint   | 18       | 
+| `invoiceCreditTerms`      | Special Code       | string or uint   | N30       | 
 
 ## Due Date
-When the devices should came to the buyer. **Invoice expires after that date?**
+
+Due Date indicates the date on which an invoice is due.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceDueDate`      | Expiration Date.       | uint   | 2020.02.02       | 
+| `invoiceDueDate`      | Invoice Due Date     | uint   | 11/6/2019       | 
 
 # Seller
 ## Company
-Information about Device Co.
+
+Company indicates Company Name and its special code.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceSellerCompay` | Full name with address?       | string   | Best Company LLC.       | 
+| `invoiceSellerCompany` | Company Name & Special Code      | string   | 0100 - Baystate Medical Center     | 
 
 ## Cost Default Vendor
-**Cost for the device**
 
-## Request Location
-Define final location of the device.
+Company Default Vendor might indicate a specific subsidiary.
 
 | Field name | Description                     | Blockchain Type   | Example           |
 | ------------- | ------------------------------ |---------------------|------------------|          
-| `invoiceRequestLocation` | Place where to ship the device.       | string   | The Best Place for Delievery st. 15      | 
+| `invoiceSellerCompany` | Company Default Vendor     | string   | B0256 - EDWARDS LIFESCIENCES LLC   | 
 
-## Requistation
-**what data should be there**?
+## Request Location
+
+Request Location might indicate the internal code of a location.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoiceRequestLocation` | Request Location & Special Code      | string   | 400 - H&V OR DAVIS WING     | 
+
+## Requisition
+
+Requisition might indicate the internal code for an invoice.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoiceRequisition` | Internal code for an invoice    | string   | 2880705 - Unreleased   | 
 
 ## Purchase From
-**Who is the third party?**
+
+Purchase From - we don't know what that could mean.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoicePurchaseFrom` | ?  | string   | N/A   | 
+
+## Buyer
+
+Buyer might indicate an allocated individual within the Hospital.
+
+| Field name | Description                     | Blockchain Type   | Example           |
+| ------------- | ------------------------------ |---------------------|------------------|          
+| `invoicePurchaseFrom` | Allocated purchaser within the Hospital  | string   | GAC - GARY CORDERO   | 
+
+
 
 # Buyer
 ## Cost Default Vendor
